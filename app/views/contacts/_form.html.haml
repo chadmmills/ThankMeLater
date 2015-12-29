@@ -1,0 +1,25 @@
+
+= form_for contact, html: { class: "tml-form" } do |f|
+
+  = raw ap contact.errors
+
+  .field
+    = f.text_field :name, placeholder: "Contact Name"
+
+  .field
+    = f.text_field :address_1, placeholder: "Address Line 1"
+
+  .field
+    = f.text_field :address_2, placeholder: "Address Line 2"
+
+  .field
+    = f.text_field :city, placeholder: "City"
+
+  .field
+    = f.text_field :state, placeholder: "State"
+
+  .field
+    = f.text_field :zipcode, placeholder: "Zipcode"
+
+  .field
+    = f.submit

@@ -1,0 +1,29 @@
+
+.tml-form {
+  margin: auto;
+  background-color: #fff;
+  width: 50%;
+  padding: 10px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px 5px;
+  font-size: .8em;
+}
+
+input[type='submit'] {
+  padding: 10px;
+  background: purple;
+  border: none;
+  color: white;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

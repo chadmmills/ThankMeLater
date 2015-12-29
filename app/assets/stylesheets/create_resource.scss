@@ -1,0 +1,53 @@
+$create-resource-size: 50px;
+
+.create-resource {
+  position: relative;
+  margin: auto;
+  margin-bottom: 20px;
+  width: $create-resource-size;
+  height: $create-resource-size;
+  border-radius: 50%;
+  background-color: purple;
+  text-align: center;
+
+  .create-resource__plus {
+    display: inline-block;
+    line-height: 46px;
+    color: white;
+    font-size: 35px;
+  }
+
+  .create-resource__list {
+    position: absolute;
+    top: 60px;
+    left: -60px;
+    width: 150px;
+    padding: 10px;
+    opacity: 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 18px lightgrey;
+
+    transition: opacity .3s ease;
+
+    &.show {
+      opacity: 1;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+      }
+    }
+
+    &:after {
+
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,16 @@
+
+%div.create-resource{ data: { js: "create-resource" } }
+  %span.create-resource__plus &#43;
+  .create-resource__list
+    %ul
+      %li= link_to "Contact", new_contact_path
+      %li= link_to "Mailing List", new_mailing_list_path
+
+.contacts
+  = react_component('ContactList', render(template: 'contacts/contacts.json.jbuilder'))
+
+.debug
+  = raw ap params
+
+.debug
+  = raw ap contacts
