@@ -1,4 +1,14 @@
 
 %h3 New Mailing List
 
-= react_component('MailingListForm', render(template: 'contacts/contacts.json.jbuilder'))
+= form_for mailing_list do |f|
+
+  = render "name_field", f: f
+
+  = f.collection_check_boxes :contact_ids, Contact.all, :id, :name do |box|
+    = box.label do
+      .contact-check-box-item
+        = box.check_box
+        = box.text
+        = box.object.full_address
+

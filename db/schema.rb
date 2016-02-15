@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151227175723) do
+ActiveRecord::Schema.define(version: 20160215224224) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +20,22 @@ ActiveRecord::Schema.define(version: 20151227175723) do
     t.string   "city"
     t.string   "state"
     t.string   "zipcode"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mailing_list_contacts", force: :cascade do |t|
+    t.integer  "contact_id",      null: false
+    t.integer  "mailing_list_id", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "mailing_list_contacts", ["contact_id"], name: "index_mailing_list_contacts_on_contact_id"
+  add_index "mailing_list_contacts", ["mailing_list_id"], name: "index_mailing_list_contacts_on_mailing_list_id"
+
+  create_table "mailing_lists", force: :cascade do |t|
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -20,17 +20,19 @@ $create-resource-size: 50px;
   .create-resource__list {
     position: absolute;
     top: 60px;
-    left: -60px;
-    width: 150px;
+    left: -100px;
+    width: 250px;
     padding: 10px;
     opacity: 0;
     background-color: #fff;
     box-shadow: 0px 0px 18px lightgrey;
+    font-family: arial, serif;
 
     transition: opacity .3s ease;
 
     &.show {
       opacity: 1;
+      z-index: 1;
     }
 
     ul {
@@ -39,6 +41,16 @@ $create-resource-size: 50px;
 
       li {
         list-style: none;
+      }
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px;
+      text-decoration: none;
+      &:hover {
+        color: white;
+        background: purple;
       }
     }
 
